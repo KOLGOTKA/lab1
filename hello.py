@@ -1,11 +1,9 @@
-import os
-
-def hello_printer(*argc):
-    if argc:
-        print(f"Hello, {','.join(argc)}! Nice to meet you in AppSec world)")
+def hello_printer(name):
+    if name:
+        print(f"Hello appsec world from {name}")
     else:
-        print(f"Hello, world! Nice to AppSec you)")
-    print(f"I see you're working from {os.uname().nodename} today.")
+        print(f"Hello appsec world from {os.uname().nodename}")
 
 if __name__ == "__main__":
-    hello_printer()
+    name = input("Write your name: ")
+    hello_printer(name)
