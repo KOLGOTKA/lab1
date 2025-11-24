@@ -3,6 +3,34 @@
 Модуль для приветствия пользователя
 """
 import typer
+import random
+
+
+COLORS = [
+    "\033[31m",
+    "\033[32m",
+    "\033[33m",
+    "\033[34m",
+    "\033[35m",
+    "\033[36m",
+    "\033[91m",
+    "\033[92m",
+    "\033[93m",
+    "\033[94m",
+    "\033[95m",
+    "\033[96m",
+]
+
+RESET = "\033[0m"
+
+def rainbow_print(text: str):
+    """Выводит строку, в которой каждая буква случайного цвета"""
+    out = []
+    for ch in text:
+        color = random.choice(COLORS)
+        out.append(f"{color}{ch}{RESET}")
+    print("".join(out))
+
 
 def hello_printer(
     name: str,
@@ -15,13 +43,13 @@ def hello_printer(
     """
     # Формальный стиль
     if formal:
-        print(f"Добрый день, {name} {lastname}!")
+        rainbow_print(f"Добрый день, {name} {lastname}!")
     # Максимально неформальный стиль
     elif antiformal:
-        print(f"Здаров, {name}!")
+        rainbow_print(f"Здаров, {name}!")
     # Повседневный стиль
     else:
-        print(f"Привет, {name}!")
+        rainbow_print(f"Привет, {name}!")
 
 if __name__ == "__main__":
     typer.run(hello_printer)
