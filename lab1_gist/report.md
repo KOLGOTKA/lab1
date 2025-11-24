@@ -163,7 +163,7 @@ __Дополнительные доработки кода в связи с ко
 
 ![git log](https://raw.githubusercontent.com/KOLGOTKA/lab1/refs/heads/master/lab1_gist/imgs/image-45.png)
 
-![tree](https://raw.githubusercontent.com/KOLGOTKA/lab1/refs/heads/master/lab1_gist/imgs/image-42.png)
+![tree](https://raw.githubusercontent.com/KOLGOTKA/lab1/refs/heads/master/lab1_gist/imgs/image-46.png)
 
 - [X] 11. Выполнить инструкцию учебного материала
 - [X] 12. Оформить `README.md` по аналогии и использовать `shield`, etc.
